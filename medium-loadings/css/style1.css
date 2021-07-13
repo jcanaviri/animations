@@ -143,3 +143,38 @@ body {
       border-radius: 50%;
       background-color: #4ecdc4;
       top: 0; }
+
+.type3 {
+  min-width: 33%;
+  width: 80px;
+  height: 80px;
+  animation: rotatefan 2s 0s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@keyframes rotatefan {
+  to {
+    transform: rotate(360deg); } }
+  .type3 * {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(70% 0, 30% 0, 50% 50%);
+    clip-path: polygon(70% 0, 30% 0, 50% 50%); }
+  .type3 .fan-1 {
+    transform: rotate(0deg);
+    background-color: #fc7753; }
+  .type3 .fan-2 {
+    transform: rotate(90deg);
+    background-color: #4ecdc4; }
+  .type3 .fan-3 {
+    transform: rotate(180deg);
+    background-color: #e84855; }
+  .type3 .fan-4 {
+    transform: rotate(270deg);
+    background-color: #312d45; }

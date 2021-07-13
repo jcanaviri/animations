@@ -29,7 +29,6 @@
   align-items: center;
 }
 
-
 // Function to make a dot
 @mixin dot($color) {
   content: '';
@@ -38,5 +37,12 @@
   width: $dot-size;
   border-radius: 50%;
   background-color: $color;
-  top:0;
+  top: 0;
+}
+
+// Helper for clip-path "triangle" shape
+@mixin clipPathForTriangle($perc) {
+  $path: polygon(percentage(1-$perc) 0, percentage($perc) 0, 50% 50%);
+  -webkit-clip-path: $path;
+  clip-path: $path;
 }
