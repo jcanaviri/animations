@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'variables';
 @import 'config';
 @import 'functions';
 
@@ -54,5 +55,59 @@
     transform: rotate($rotation + deg);
     @include rotateAnimation($rotation, 4);
     animation: rotate4 2s 0s linear infinite;
+  }
+}
+
+.type2 {
+  min-width: 33%;
+  $size: 80px;
+  width: $size;
+  height: $size;
+  @include centerChildren();
+  * {
+    position: absolute;
+    width: $size;
+    height: $size;
+    @include centerChildren();
+  }
+  .dot-1 {
+    $rotate-deg: $rotate-starting;
+    transform: rotate($rotate-deg + deg);
+    @include rotateAnimation($rotate-deg, dot1);
+    animation: rotatedot1 $rotate-duration - $rotate-interval * 3 + s
+      $rotate-interval * 3 + s ease-in-out infinite;
+    &:after {
+      @include dot($orange);
+    }
+  }
+  .dot-2 {
+    $rotate-deg: $rotate-step + $rotate-starting;
+    transform: rotate($rotate-deg + deg);
+    @include rotateAnimation($rotate-deg, dot2);
+    animation: rotatedot2 $rotate-duration - $rotate-interval * 2 + s
+      $rotate-interval * 2 + s ease-in-out infinite;
+    &:after {
+      @include dot($blue);
+    }
+  }
+  .dot-3 {
+    $rotate-deg: $rotate-step * 2 + $rotate-starting;
+    transform: rotate($rotate-deg + deg);
+    @include rotateAnimation($rotate-deg, dot3);
+    animation: rotatedot3 $rotate-duration - $rotate-interval * 1 + s
+      $rotate-interval * 1 + s ease-in-out infinite;
+    &:after {
+      @include dot($red);
+    }
+  }
+  .dot-4 {
+    $rotate-deg: $rotate-step * 3 + $rotate-starting;
+    transform: rotate($rotate-deg + deg);
+    @include rotateAnimation($rotate-deg, dot4);
+    animation: rotatedot4 $rotate-duration - $rotate-interval * 0 + s
+      $rotate-interval * 0 + s ease-in-out infinite;
+    &:after {
+      @include dot($green);
+    }
   }
 }

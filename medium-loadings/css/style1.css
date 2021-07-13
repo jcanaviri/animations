@@ -68,3 +68,78 @@ body {
 @keyframes rotate4 {
   to {
     transform: rotate(345deg); } }
+
+.type2 {
+  min-width: 33%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .type2 * {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .type2 .dot-1 {
+    transform: rotate(-30deg);
+    animation: rotatedot1 1.4s 0.6s ease-in-out infinite; }
+
+@keyframes rotatedot1 {
+  to {
+    transform: rotate(330deg); } }
+    .type2 .dot-1:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #fc7753;
+      top: 0; }
+  .type2 .dot-2 {
+    transform: rotate(-8deg);
+    animation: rotatedot2 1.6s 0.4s ease-in-out infinite; }
+
+@keyframes rotatedot2 {
+  to {
+    transform: rotate(352deg); } }
+    .type2 .dot-2:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #312d45;
+      top: 0; }
+  .type2 .dot-3 {
+    transform: rotate(14deg);
+    animation: rotatedot3 1.8s 0.2s ease-in-out infinite; }
+
+@keyframes rotatedot3 {
+  to {
+    transform: rotate(374deg); } }
+    .type2 .dot-3:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #e84855;
+      top: 0; }
+  .type2 .dot-4 {
+    transform: rotate(36deg);
+    animation: rotatedot4 2s 0s ease-in-out infinite; }
+
+@keyframes rotatedot4 {
+  to {
+    transform: rotate(396deg); } }
+    .type2 .dot-4:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #4ecdc4;
+      top: 0; }

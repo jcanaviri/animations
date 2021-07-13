@@ -28,3 +28,15 @@
   justify-content: center;
   align-items: center;
 }
+
+
+// Function to make a dot
+@mixin dot($color) {
+  content: '';
+  position: absolute;
+  height: $dot-size;
+  width: $dot-size;
+  border-radius: 50%;
+  background-color: $color;
+  top:0;
+}
