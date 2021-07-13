@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'config';
+@import 'functions';
+
+.type1 {
+  min-width: 33%;
+  $size: 80px;
+  $border-width: 3px;
+  @include centerChildren();
+
+  * {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .ring-1 {
+    $rotation: 45;
+    width: $size;
+    height: $size;
+    border: solid $border-width $orange;
+    transform: rotate($rotation + deg);
+    @include clipPathForCircle(0.3);
+    @include rotateAnimation($rotation, 1);
+    animation: rotate1 2s 0s linear infinite;
+  }
+  .ring-2 {
+    $rotation: 15;
+    $ring2size: $size * 0.7;
+    width: $ring2size;
+    height: $ring2size;
+    border: solid $border-width $green;
+    @include clipPathForCircle(0.5);
+    transform: rotate($rotation + deg);
+    @include rotateAnimation($rotation, 2);
+    animation: rotate2 1.5s 0s linear infinite;
+  }
+  .ring-3 {
+    $rotation: -45;
+    $ring3size: $size * 0.4;
+    width: $ring3size;
+    height: $ring3size;
+    border: solid $border-width $blue;
+    @include clipPathForCircle(0.7);
+    transform: rotate($rotation + deg);
+    @include rotateAnimation($rotation, 3);
+    animation: rotate3 1s 0s linear infinite;
+  }
+  .ring-4 {
+    $rotation: -15;
+    $ring4size: $size * 0.15;
+    width: $ring4size;
+    height: $ring4size;
+    border: solid $border-width $red;
+    @include clipPathForCircle(0.8);
+    transform: rotate($rotation + deg);
+    @include rotateAnimation($rotation, 4);
+    animation: rotate4 2s 0s linear infinite;
+  }
+}

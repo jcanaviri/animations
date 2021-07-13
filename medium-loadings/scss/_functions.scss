@@ -1,0 +1,30 @@
+// Helper for clip-path, use perc to calculate the clip area
+@mixin clipPathForCircle($perc) {
+  $path: polygon(
+    50% 50%,
+    percentage(0.5 + $perc) 0,
+    110% 0,
+    110% 110%,
+    0 110%,
+    0 0,
+    percentage(0.5 - $perc) 0
+  );
+  -webkit-clip-path: $path;
+  clip-path: $path;
+}
+
+@mixin rotateAnimation($starting, $label) {
+  $endDeg: 360 + $starting;
+  @keyframes rotate#{$label} {
+    to {
+      transform: rotate($endDeg + deg);
+    }
+  }
+}
+
+// Helper for center element
+@mixin centerChildren() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
