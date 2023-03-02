@@ -24,7 +24,7 @@
   height: 20px;
   background-color: #68EF8F;
   border-radius: 100%;
-  animation: upAndDown 1.2s ease-out infinite;
+  animation: upAndDown 1.5s ease-out infinite;
 }
 
 .dot:nth-child(1) {
@@ -37,8 +37,11 @@
   animation-delay: 0.6s;
 }
 @keyframes upAndDown {
-  0%, 100% {
+  0%, 75%, 100% {
     transform: translateY(0);
+  }
+  25% {
+    transform: translateY(25px);
   }
   50% {
     transform: translateY(25px);
