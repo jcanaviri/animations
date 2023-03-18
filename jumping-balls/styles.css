@@ -24,7 +24,7 @@
   height: 20px;
   background-color: #68EF8F;
   border-radius: 100%;
-  animation: upAndDown 1.5s ease-out infinite;
+  animation: upAndDown 1s ease-out infinite;
 }
 
 .dot:nth-child(1) {
